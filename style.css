@@ -307,3 +307,48 @@ form button {
   width: 30px;
   height: 30px;
 }
+.split-section { display: flex; min-height: 1000px; }
+.split-text    { width: 50%; }   /* 왼쪽: 설명글 */
+.split-image   { width: 50%; }   /* 오른쪽: 이미지 */
+.split-image img {
+  width: 100%;       /* 가로: 부모(50%) 꽉 채움 */
+  height: 100%;      /* 세로: 부모 높이 꽉 채움 */
+  object-fit: cover; /* 비율 유지하면서 크롭 (추천) */
+  object-position: center center;
+}
+.split-text {
+      width: 50%;
+      padding: 5rem 4rem;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+ 
+    .split-text .tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      background: #eef4ff;
+      color: #3a74d0;
+      border-radius: 6px;
+      width: fit-content;
+    }
+ 
+    .split-text h2 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.35;
+      letter-spacing: -0.5px;
+    }
+ 
+    .split-text p {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.75;
+      max-width: 440px;
+    }
